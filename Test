@@ -1,1 +1,49 @@
-Testing 
+package Sec5Les1;
+import java.util.Scanner; 
+
+public class Test
+{
+	/**
+	* Program: Sec5Les1 problem 2
+	* Descrption: Calculator program
+	* Author: Robert Nielsen
+	* 10/15/16
+	*/
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in); 
+		System.out.println("Input the first number and press enter."); 
+		double first = sc.nextDouble(); //User input
+		System.out.println("Input the second number and press enter."); 
+		double second = sc.nextDouble(); //User input
+		System.out.println("Input the operator to apply."); 
+		char operator = sc.next().charAt(0); //User input
+		
+		double answer=0; //Initialize answer
+		
+		switch(operator){  //Switch statement
+			case '+': 
+				answer = first + second;
+				break;
+			case '-':
+				answer = first - second;
+				break;
+			case '*':
+				answer = first * second;
+				break;
+			case '/':
+				answer = first / second;
+				break;
+			case '%':
+				answer = first % second;
+				break;
+			default: //If not valid, outputs "Not valid operator"
+				System.out.println("Not valid operator"); 
+		}
+		System.out.println(answer); 
+	}
+	/**
+	* Learned: How to replace if else statements with more efficient,
+	* 		but more situational switch statements.
+	* Problems: There were no problems that I am aware of.
+	*/
+}
